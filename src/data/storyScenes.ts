@@ -1,0 +1,462 @@
+export interface SceneCTA {
+  label: string
+  actionType: 'scroll' | 'modal'
+  target: string
+}
+
+export interface StorySceneData {
+  id: string
+  number: string
+  blockName: string
+  parentThought?: string
+  title: string
+  titleDark: string
+  titleGrey: string
+  copy: string
+  hasImage: boolean
+  videoUrl?: string
+  imageUrl?: string
+  imageAlt?: string
+  imageCaption?: string
+  secondaryImageUrl?: string
+  secondaryImageCaption?: string
+  theme: 'alabaster' | 'white'
+  primaryCta: SceneCTA
+  secondaryCta: SceneCTA
+}
+
+export const HERO_VIDEO_REELS = [
+  {
+    id: 'reel-1',
+    label: 'Chapter I · Wonder in Nature',
+    videoUrl: '/videos/hero-background.mp4',
+    fallbackUrl: 'https://assets.mixkit.co/videos/preview/mixkit-children-playing-in-the-park-4739-large.mp4',
+    poster: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1400&q=85',
+    caption: 'They were so little, once. A tiny hand holding yours. A thousand questions.',
+  },
+  {
+    id: 'reel-2',
+    label: 'Chapter II · Hands-On Discovery',
+    videoUrl: '/videos/hero-bg.mp4',
+    fallbackUrl: 'https://assets.mixkit.co/videos/preview/mixkit-teacher-helping-kids-in-class-4763-large.mp4',
+    poster: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=85',
+    caption: 'A place where they can Think. Feel. Move. Pause. Where questions are welcomed.',
+  },
+  {
+    id: 'reel-3',
+    label: 'Chapter III · Seven-Acre Sanctuary',
+    videoUrl: '/videos/hero-bg.mp4',
+    fallbackUrl: 'https://assets.mixkit.co/videos/preview/mixkit-little-girl-running-in-a-meadow-41874-large.mp4',
+    poster: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=85',
+    caption: 'Rooted in Childhood. Ready for the World. GenBright World School, Mokila.',
+  },
+]
+
+export const BRAND_INFO = {
+  schoolName: 'GenBright World School',
+  creativeDirection: 'The Childhood You Dream Of for Them.',
+  brandPromise: 'Rooted in Childhood. Ready for the World.',
+  admissionsBanner: 'Admissions 2027-28 | Nursery to Grade 8 | Mokila, Hyderabad',
+  heroWhisper:
+    'Will my child be happy? Will they be understood? Will they learn enough? Who will care for them? The child is the hero; the parent is the heart of the story; GenBright is the trusted companion.',
+  address: '5-159, Donthanpalle, Mokila, Hyderabad - 501203',
+  email: 'admissions@genbright.in',
+  website: 'www.genbright.in',
+}
+
+export const BRAND_FILM_VOICEOVER = [
+  'They were so little, once. A tiny hand holding yours. A thousand questions. A world they had only just begun to discover.',
+  'And you promised yourself you would give them the very best. Not just the best education. But the chance to be happy. To feel loved. To find their courage. To make mistakes and learn to try again.',
+  'We understand that promise. Because for 35 years, across five schools, educating young minds has been more than our work. It has been our purpose.',
+  'And now, at GenBright, we bring that experience to a new generation. A place where they can think. Feel. Move. Pause. Where questions are welcomed. Where individuality is celebrated. And where learning is something they live every day.',
+  'You have given them their first world. Let us help them discover the next. GenBright World School. Rooted in Childhood. Ready for the World.',
+]
+
+export const NAV_ITEMS = [
+  { label: 'Discover', target: 'scene-01', scenes: ['01', '04', '07'] },
+  { label: 'Learning', target: 'scene-03', scenes: ['03', '05', '08'] },
+  { label: 'Life', target: 'scene-02', scenes: ['02', '06', '09'] },
+  { label: 'Community', target: 'scene-11', scenes: ['11', '12', '13'] },
+  { label: 'Stories', target: 'scene-10', scenes: ['10', '14'] },
+  { label: 'Admissions', target: 'scene-15', scenes: ['15'] },
+]
+
+export const STORY_SCENES: StorySceneData[] = [
+  {
+    id: 'scene-01',
+    number: '01',
+    blockName: 'HERO FILM',
+    parentThought: '01 · HERO FILM',
+    title: 'They grow up only once.',
+    titleDark: 'They grow up',
+    titleGrey: 'only once.',
+    copy: 'There is a moment in every parent’s life when you realise how quickly childhood passes. The little hand that once held yours begins to let go. The endless questions become bigger dreams. At GenBright, we understand. Your child deserves an education that protects the wonder of childhood while preparing them for the world ahead. GenBright World School - Rooted in Childhood. Ready for the World.',
+    hasImage: true,
+    videoUrl: '/videos/hero-background.mp4',
+    imageUrl:
+      'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1400&q=85',
+    imageAlt: 'They grow up only once.',
+    theme: 'white',
+    primaryCta: { label: 'Discover Our Story', actionType: 'scroll', target: 'scene-02' },
+    secondaryCta: { label: 'Book a Campus Visit', actionType: 'modal', target: 'admissions' },
+  },
+  {
+    id: 'scene-02',
+    number: '02',
+    blockName: 'EMOTIONAL REASSURANCE',
+    parentThought: '02 · EMOTIONAL REASSURANCE',
+    title: 'Will my child be happy here?',
+    titleDark: 'Will my child',
+    titleGrey: 'be happy here?',
+    copy: 'Will someone notice when they are quiet? Will they find friends? Will they feel confident enough to ask questions? We want your child to feel school is a place where they belong: where relationships matter, emotions are respected and curiosity is welcomed. Children learn best when they feel secure, understood and valued.',
+    hasImage: true,
+    imageUrl: '/images/section-02-children.png',
+    imageAlt: 'Happy children smiling together at school',
+    theme: 'alabaster',
+    primaryCta: { label: 'How We Care for Your Child', actionType: 'scroll', target: 'scene-03' },
+    secondaryCta: { label: 'A Day at GenBright', actionType: 'scroll', target: 'scene-06' },
+  },
+  {
+    id: 'scene-03',
+    number: '03',
+    blockName: 'INDIVIDUAL LEARNING',
+    parentThought: '03 · INDIVIDUAL LEARNING',
+    title: 'What if they learn differently?',
+    titleDark: 'What if they',
+    titleGrey: 'learn differently?',
+    copy: 'Your child may be a dreamer, an explorer, a quiet observer or an energetic questioner. Our Individual Learning Goal approach helps us understand their strengths, interests, progress and developmental needs. We do not want to make your child like every other child. We want to help them become themselves.',
+    hasImage: true,
+    imageUrl:
+      'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85',
+    imageAlt: 'What if they learn differently?',
+    theme: 'white',
+    primaryCta: { label: 'Understand ILG', actionType: 'scroll', target: 'scene-05' },
+    secondaryCta: { label: 'Meet Our Mentors', actionType: 'scroll', target: 'scene-07' },
+  },
+  {
+    id: 'scene-04',
+    number: '04',
+    blockName: 'FOUR PILLARS',
+    parentThought: '04 · FOUR PILLARS',
+    title: 'What kind of person will my child become?',
+    titleDark: 'What kind of person',
+    titleGrey: 'will my child become?',
+    copy: 'You want your child to be intelligent, compassionate, independent, resilient and thoughtful. THINK nurtures reasoning and curiosity. FEEL nurtures empathy and emotional awareness. MOVE nurtures physical confidence. PAUSE nurtures reflection and balance. We care about what your child knows and who they become.',
+    hasImage: false,
+    theme: 'alabaster',
+    primaryCta: { label: 'Explore Our Philosophy', actionType: 'scroll', target: 'scene-05' },
+    secondaryCta: { label: 'Discover Life Skills', actionType: 'scroll', target: 'scene-08' },
+  },
+  {
+    id: 'scene-05',
+    number: '05',
+    blockName: 'ACADEMICS',
+    parentThought: '05 · ACADEMICS',
+    title: 'Will they be academically prepared?',
+    titleDark: 'Will they be',
+    titleGrey: 'academically prepared?',
+    copy: 'You want your child to read, write, reason, calculate and communicate confidently. Our Cambridge-based approach values understanding, inquiry, reflection and application. Structured academics and hands-on learning help children connect knowledge with life.',
+    hasImage: true,
+    imageUrl: '/images/academically-prepared.png',
+    imageAlt: 'Students reading, calculating, and inquiring together in a sunlit Cambridge classroom',
+    theme: 'white',
+    primaryCta: { label: 'Explore Academics', actionType: 'scroll', target: 'scene-08' },
+    secondaryCta: { label: "Find Your Child's Programme", actionType: 'modal', target: 'admissions' },
+  },
+  {
+    id: 'scene-06',
+    number: '06',
+    blockName: 'CAMPUS & CHILDHOOD',
+    parentThought: '06 · CAMPUS & CHILDHOOD',
+    title: 'Will they have time to be children?',
+    titleDark: 'Will they have time',
+    titleGrey: 'to be children?',
+    copy: 'To run, climb, plant, build, play, discover and come home with stories. Our seven-acre campus creates opportunities for nature learning, sports, STEAM, creativity and practical experiences. Some of the most important lessons arrive with muddy shoes and a smile.',
+    hasImage: false,
+    theme: 'alabaster',
+    primaryCta: { label: 'Explore Campus', actionType: 'scroll', target: 'scene-08' },
+    secondaryCta: { label: 'View Gallery', actionType: 'scroll', target: 'scene-09' },
+  },
+  {
+    id: 'scene-07',
+    number: '07',
+    blockName: 'LEGACY',
+    parentThought: '07 · LEGACY',
+    title: 'Who are the people behind this school?',
+    titleDark: 'Who are the people',
+    titleGrey: 'behind this school?',
+    copy: 'GenBright draws on 35 years of educational experience across five schools in Chennai. Founder Dhanyabharathi Kannan brings 15 years as a practising educationist, mentoring learners and educators and engaging in international education and entrepreneurship forums. Experience should translate into thoughtful everyday care for your child.',
+    hasImage: true,
+    imageUrl:
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1100&q=85',
+    imageAlt: 'Who are the people behind this school?',
+    theme: 'white',
+    primaryCta: { label: 'Our 35-Year Legacy', actionType: 'scroll', target: 'scene-14' },
+    secondaryCta: { label: "Founder's Letter", actionType: 'modal', target: 'founder-letter' },
+  },
+  {
+    id: 'scene-08',
+    number: '08',
+    blockName: 'LEARNING CENTRES',
+    parentThought: '08 · LEARNING CENTRES',
+    title: 'What will they discover here?',
+    titleDark: 'What will they',
+    titleGrey: 'discover here?',
+    copy: 'Our 13 Learning Centres connect art, making, ecology, AI, community, mixed-age learning, assessment, industry, higher education, sports, teacher development, emotional wellbeing and parent partnerships. The world is not divided into subjects; curiosity should not be either.',
+    hasImage: false,
+    theme: 'alabaster',
+    primaryCta: { label: 'Explore All 13 Learning Centres', actionType: 'scroll', target: 'scene-09' },
+    secondaryCta: { label: 'See Learning in Action', actionType: 'scroll', target: 'scene-09' },
+  },
+  {
+    id: 'scene-09',
+    number: '09',
+    blockName: 'GALLERY',
+    parentThought: '09 · GALLERY',
+    title: 'Childhood in motion',
+    titleDark: 'Childhood',
+    titleGrey: 'in motion',
+    copy: 'A smile after solving a problem. Muddy hands after planting a seed. A new friendship. A moment of courage. Explore real photographs, films, student work and everyday experiences from the GenBright community.',
+    hasImage: true,
+    imageUrl:
+      'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=85',
+    imageAlt: 'Childhood in motion',
+    theme: 'white',
+    primaryCta: { label: 'Explore Gallery', actionType: 'modal', target: 'film-voiceover' },
+    secondaryCta: { label: 'Watch School Films', actionType: 'modal', target: 'film-voiceover' },
+  },
+  {
+    id: 'scene-10',
+    number: '10',
+    blockName: 'NEWS',
+    parentThought: '10 · NEWS',
+    title: 'There is always something growing at GenBright.',
+    titleDark: 'There is always something',
+    titleGrey: 'growing at GenBright.',
+    copy: 'Every celebration, field visit, project and milestone adds a chapter to our story. Discover school news, upcoming events, student and educator achievements, and Bright Times magazine.',
+    hasImage: false,
+    theme: 'alabaster',
+    primaryCta: { label: 'News & Events', actionType: 'scroll', target: 'scene-14' },
+    secondaryCta: { label: 'Read Bright Times', actionType: 'modal', target: 'bright-times' },
+  },
+  {
+    id: 'scene-11',
+    number: '11',
+    blockName: 'LITTLE CIRCLE',
+    parentThought: '11 · LITTLE CIRCLE',
+    title: 'Little beginnings. Bigger possibilities.',
+    titleDark: 'Little beginnings.',
+    titleGrey: 'Bigger possibilities.',
+    copy: 'GenBright Little Circle is our preschool partnership alliance, connecting early childhood educators, preschool leaders, families and GenBright through collaborative experiences, professional engagement, parent interactions and transition support.',
+    hasImage: true,
+    imageUrl:
+      'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1200&q=85',
+    imageAlt: 'Little beginnings. Bigger possibilities.',
+    theme: 'white',
+    primaryCta: { label: 'Join Little Circle', actionType: 'modal', target: 'little-circle' },
+    secondaryCta: { label: 'Explore Partnership Benefits', actionType: 'modal', target: 'little-circle' },
+  },
+  {
+    id: 'scene-12',
+    number: '12',
+    blockName: 'COMMUNITY',
+    parentThought: '12 · COMMUNITY',
+    title: 'It takes a community to shape a child’s world.',
+    titleDark: 'It takes a community',
+    titleGrey: 'to shape a child’s world.',
+    copy: 'Children learn from artists, scientists, farmers, entrepreneurs, institutions and communities. We invite meaningful partnerships with organisations, NGOs, higher education, industry, experts and volunteers.',
+    hasImage: false,
+    theme: 'alabaster',
+    primaryCta: { label: 'Partner with GenBright', actionType: 'modal', target: 'community-partner' },
+    secondaryCta: { label: 'Volunteer or Mentor', actionType: 'modal', target: 'community-partner' },
+  },
+  {
+    id: 'scene-13',
+    number: '13',
+    blockName: 'CAREERS',
+    parentThought: '13 · CAREERS',
+    title: 'What if teaching could be a journey of discovery, too?',
+    titleDark: 'What if teaching could be',
+    titleGrey: 'a journey of discovery, too?',
+    copy: 'We seek thoughtful educators and professionals who remain curious, reflective and committed to growth. GenBright values creativity, collaboration, care and professional learning.',
+    hasImage: true,
+    imageUrl:
+      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85',
+    imageAlt: 'What if teaching could be a journey of discovery, too?',
+    theme: 'white',
+    primaryCta: { label: 'Explore Careers', actionType: 'modal', target: 'careers' },
+    secondaryCta: { label: 'Grow as an Educator', actionType: 'modal', target: 'careers' },
+  },
+  {
+    id: 'scene-14',
+    number: '14',
+    blockName: 'ARCHIVES',
+    parentThought: '14 · ARCHIVES',
+    title: 'Some moments deserve to be remembered.',
+    titleDark: 'Some moments deserve',
+    titleGrey: 'to be remembered.',
+    copy: 'Our archives preserve school milestones, publications, achievements, event photographs, films and memories. This is a living record of the community we are building.',
+    hasImage: false,
+    theme: 'alabaster',
+    primaryCta: { label: 'Explore Archives', actionType: 'scroll', target: 'scene-15' },
+    secondaryCta: { label: 'View Milestones', actionType: 'scroll', target: 'scene-15' },
+  },
+  {
+    id: 'scene-15',
+    number: '15',
+    blockName: 'FINAL ADMISSIONS',
+    parentThought: '15 · FINAL ADMISSIONS',
+    title: 'Perhaps their next chapter begins here.',
+    titleDark: 'Perhaps their next chapter',
+    titleGrey: 'begins here.',
+    copy: 'One day they will have their own ideas, friendships and dreams. When you look back, we hope you remember a childhood full of curiosity, kindness, discovery and possibility. Let us help you give them a beautiful beginning. Admissions Open 2027-28, Nursery to Grade 8.',
+    hasImage: true,
+    imageUrl:
+      'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=85',
+    imageAlt: 'Perhaps their next chapter begins here.',
+    theme: 'white',
+    primaryCta: { label: 'Begin Your GenBright Journey', actionType: 'modal', target: 'admissions' },
+    secondaryCta: { label: 'Visit Our Campus', actionType: 'modal', target: 'admissions' },
+  },
+]
+
+export const FOUR_PILLARS_DATA = [
+  {
+    key: 'THINK',
+    roman: '01',
+    quote: '"I wonder..."',
+    subtitle: 'Reasoning & Curiosity',
+    description: 'THINK nurtures reasoning and curiosity.',
+    ethos: 'Think',
+    imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85',
+    imageAlt: 'THINK — Student focused in curiosity and learning',
+  },
+  {
+    key: 'FEEL',
+    roman: '02',
+    quote: '"I understand..."',
+    subtitle: 'Empathy & Emotional Awareness',
+    description: 'FEEL nurtures empathy and emotional awareness.',
+    ethos: 'Feel',
+    imageUrl: '/images/what-kind-of-person.png',
+    imageAlt: 'FEEL — Children sharing warmth, empathy, and collaboration',
+  },
+  {
+    key: 'MOVE',
+    roman: '03',
+    quote: '"Look how high I can reach!"',
+    subtitle: 'Physical Confidence',
+    description: 'MOVE nurtures physical confidence.',
+    ethos: 'Move',
+    imageUrl: 'https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=1200&q=85',
+    imageAlt: 'MOVE — Child running and playing outdoors with physical confidence',
+  },
+  {
+    key: 'PAUSE',
+    roman: '04',
+    quote: '"I noticed..."',
+    subtitle: 'Reflection & Balance',
+    description: 'PAUSE nurtures reflection and balance.',
+    ethos: 'Pause',
+    imageUrl: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=85',
+    imageAlt: 'PAUSE — Child reflecting quietly by sunlight and nature',
+  },
+]
+
+export const LEARNING_STAGES = [
+  { name: 'Seed', grades: 'Stage 01', focus: 'Understanding · Inquiry · Reflection · Application' },
+  { name: 'Sprout', grades: 'Stage 02', focus: 'Understanding · Inquiry · Reflection · Application' },
+  { name: 'Sapling', grades: 'Stage 03', focus: 'Understanding · Inquiry · Reflection · Application' },
+  { name: 'Bloom', grades: 'Stage 04', focus: 'Understanding · Inquiry · Reflection · Application' },
+  { name: 'Flourish', grades: 'Stage 05', focus: 'Understanding · Inquiry · Reflection · Application' },
+]
+
+export const THIRTEEN_CENTRES = [
+  { num: '01', name: 'Art', tag: 'Learning Centre 01', detail: '', imageUrl: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=85' },
+  { num: '02', name: 'Making', tag: 'Learning Centre 02', detail: '', imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=85' },
+  { num: '03', name: 'Ecology', tag: 'Learning Centre 03', detail: '', imageUrl: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=85' },
+  { num: '04', name: 'AI', tag: 'Learning Centre 04', detail: '', imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85' },
+  { num: '05', name: 'Community', tag: 'Learning Centre 05', detail: '', imageUrl: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85' },
+  { num: '06', name: 'Mixed-Age Learning', tag: 'Learning Centre 06', detail: '', imageUrl: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85' },
+  { num: '07', name: 'Assessment', tag: 'Learning Centre 07', detail: '', imageUrl: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=900&q=85' },
+  { num: '08', name: 'Industry', tag: 'Learning Centre 08', detail: '', imageUrl: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=900&q=85' },
+  { num: '09', name: 'Higher Education', tag: 'Learning Centre 09', detail: '', imageUrl: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=900&q=85' },
+  { num: '10', name: 'Sports', tag: 'Learning Centre 10', detail: '', imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85' },
+  { num: '11', name: 'Teacher Development', tag: 'Learning Centre 11', detail: '', imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85' },
+  { num: '12', name: 'Emotional Wellbeing', tag: 'Learning Centre 12', detail: '', imageUrl: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=85' },
+  { num: '13', name: 'Parent Partnerships', tag: 'Learning Centre 13', detail: '', imageUrl: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=900&q=85' },
+]
+
+export const GALLERY_SLIDES = [
+  {
+    id: 'gal-1',
+    category: 'Photographs',
+    title: 'A smile after solving a problem.',
+    caption: 'Real photographs from the GenBright community.',
+    type: 'Photographs',
+    imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80',
+  },
+  {
+    id: 'gal-2',
+    category: 'Films',
+    title: 'Muddy hands after planting a seed.',
+    caption: 'Films from the GenBright community.',
+    type: 'Films',
+    imageUrl: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=80',
+  },
+  {
+    id: 'gal-3',
+    category: 'Student Work',
+    title: 'A new friendship.',
+    caption: 'Student work from the GenBright community.',
+    type: 'Student Work',
+    imageUrl: 'https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=1000&q=80',
+  },
+  {
+    id: 'gal-4',
+    category: 'Everyday Experiences',
+    title: 'A moment of courage.',
+    caption: 'Everyday experiences from the GenBright community.',
+    type: 'Everyday Experiences',
+    imageUrl: 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1000&q=80',
+  },
+]
+
+export const NEWS_CARDS = [
+  {
+    category: '01 · NEWS & EVENTS',
+    date: 'GenBright',
+    title: 'School News & Upcoming Events',
+    excerpt: 'Every celebration, field visit, project and milestone adds a chapter to our story.',
+    tag: 'News & Events',
+  },
+  {
+    category: '02 · ACHIEVEMENTS',
+    date: 'GenBright',
+    title: 'Student & Educator Achievements',
+    excerpt: 'Discover school news, upcoming events, student and educator achievements.',
+    tag: 'Achievements',
+  },
+  {
+    category: '03 · MAGAZINE',
+    date: 'GenBright',
+    title: 'Bright Times Magazine',
+    excerpt: 'Discover school news, upcoming events, student and educator achievements, and Bright Times magazine.',
+    tag: 'Bright Times',
+  },
+]
+
+export const ARCHIVE_MILESTONES = [
+  {
+    year: 'School Milestones',
+    era: 'ARCHIVE 01',
+    title: 'Publications & Achievements',
+    summary: 'Our archives preserve school milestones, publications, achievements, event photographs, films and memories.',
+  },
+  {
+    year: 'Event Photographs',
+    era: 'ARCHIVE 02',
+    title: 'Films & Memories',
+    summary: 'This is a living record of the community we are building.',
+  },
+]
