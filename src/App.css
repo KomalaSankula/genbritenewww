@@ -953,9 +953,74 @@
   background-color: #ffffff !important;
 }
 
-/* Use the matching white-and-sage treatment for secondary CTAs. */
+/* Frosted glass treatment for hero secondary CTA matching img2 */
 .gb-hero-overlay__ctas .gb-btn--outline-light,
-.gb-hero-second-btn,
+.gb-hero-second-btn {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border: 2px solid #829b70 !important;
+  backdrop-filter: blur(14px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(140%) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+  border-radius: 9999px !important;
+  height: 54px !important;
+  padding: 0 8px 0 1.65rem !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 1.15rem !important;
+  outline: none !important;
+  transition: all 0.24s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  cursor: pointer !important;
+}
+
+.gb-hero-overlay__ctas .gb-btn--outline-light::after,
+.gb-hero-second-btn::after {
+  content: '' !important;
+  background-color: #829b70 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'/%3E%3Cpolyline points='7 7 17 7 17 17'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 16px 16px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease !important;
+}
+
+.gb-hero-overlay__ctas .gb-btn--outline-light:hover,
+.gb-hero-second-btn:hover {
+  background: rgba(130, 155, 112, 0.36) !important;
+  border-color: #829b70 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.26) !important;
+}
+
+.gb-hero-overlay__ctas .gb-btn--outline-light:hover::after,
+.gb-hero-second-btn:hover::after {
+  transform: translate(2px, -2px) !important;
+  background-color: #829b70 !important;
+}
+
+.gb-hero-overlay__ctas .gb-btn--outline-light:active,
+.gb-hero-second-btn:active,
+.gb-hero-overlay__ctas .gb-btn--outline-light:focus,
+.gb-hero-second-btn:focus,
+.gb-hero-overlay__ctas .gb-btn--outline-light:focus-visible,
+.gb-hero-second-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.24) !important;
+  border: 2px solid #829b70 !important;
+  color: #ffffff !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(130, 155, 112, 0.4), 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Matching treatment for secondary CTAs in other sections */
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:nth-child(2) {
   background: #ffffff !important;
   color: #718a60 !important;
@@ -975,8 +1040,6 @@
   cursor: pointer !important;
 }
 
-.gb-hero-overlay__ctas .gb-btn--outline-light::after,
-.gb-hero-second-btn::after,
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:nth-child(2)::after {
   content: '' !important;
   background-color: #829b70 !important;
@@ -992,8 +1055,6 @@
   transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease !important;
 }
 
-.gb-hero-overlay__ctas .gb-btn--outline-light:hover,
-.gb-hero-second-btn:hover,
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:nth-child(2):hover {
   background: #718a60 !important;
   border-color: #718a60 !important;
@@ -1002,22 +1063,14 @@
   box-shadow: 0 10px 24px rgba(113, 138, 96, 0.32) !important;
 }
 
-.gb-hero-overlay__ctas .gb-btn--outline-light:hover::after,
-.gb-hero-second-btn:hover::after,
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:nth-child(2):hover::after {
   transform: translate(2px, -2px) !important;
   background-color: #ffffff !important;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23718a60' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'/%3E%3Cpolyline points='7 7 17 7 17 17'/%3E%3C/svg%3E") !important;
 }
 
-.gb-hero-overlay__ctas .gb-btn--outline-light:active,
-.gb-hero-second-btn:active,
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:nth-child(2):active,
-.gb-hero-overlay__ctas .gb-btn--outline-light:focus,
-.gb-hero-second-btn:focus,
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:nth-child(2):focus,
-.gb-hero-overlay__ctas .gb-btn--outline-light:focus-visible,
-.gb-hero-second-btn:focus-visible,
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:nth-child(2):focus-visible {
   background: #ffffff !important;
   border: 1.5px solid #829b70 !important;
@@ -1064,29 +1117,6 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300873c' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'/%3E%3Cpolyline points='7 7 17 7 17 17'/%3E%3C/svg%3E") !important;
 }
 
-.gb-hero-overlay__ctas .gb-btn--outline-light {
-  background: #ffffff;
-  color: #617b4e;
-  border: 2px solid #7f9b68;
-  box-shadow: none;
-  backdrop-filter: blur(8px);
-}
-
-.gb-hero-overlay__ctas .gb-btn--outline-light::after {
-  background-color: #7f9b68;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'/%3E%3Cpolyline points='7 7 17 7 17 17'/%3E%3C/svg%3E");
-}
-
-.gb-hero-overlay__ctas .gb-btn--outline-light:hover {
-  background: #7f9b68;
-  color: #ffffff;
-  border-color: #7f9b68;
-}
-
-.gb-hero-overlay__ctas .gb-btn--outline-light:hover::after {
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23617b4e' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'/%3E%3Cpolyline points='7 7 17 7 17 17'/%3E%3C/svg%3E");
-}
 
 /* --------------------------------------------------------------------------
    SINGLE LEFT-ALIGNED SECTION HEADER DESIGN (GREEN & YELLOW PALETTE)
