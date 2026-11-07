@@ -284,6 +284,42 @@ export function InteractiveModal({ modalId, onClose }: InteractiveModalProps) {
                 </button>
               </form>
             )}
+
+            {!['admissions', 'parent-portal', 'student-portal', 'founder-letter', 'film-voiceover', 'bright-times', 'little-circle', 'community-partner', 'careers'].includes(modalId) && (
+              <form className="gb-modal-form" onSubmit={handleSubmit}>
+                <span className="gb-eyebrow">ENQUIRY &amp; CAMPUS VISIT · GENBRIGHT WORLD SCHOOL</span>
+                <h3>Begin Your GenBright Journey</h3>
+                <p>
+                  Connect with our admissions &amp; academic counsellors at Mokila, Hyderabad.
+                </p>
+                <div className="gb-form-grid">
+                  <label>
+                    Your Name *
+                    <input type="text" required placeholder="Full name" />
+                  </label>
+                  <label>
+                    Mobile Number *
+                    <input type="tel" required placeholder="+91 98765 43210" />
+                  </label>
+                  <label>
+                    Email Address *
+                    <input type="email" required placeholder="name@example.com" />
+                  </label>
+                  <label>
+                    Interested In *
+                    <select required defaultValue="Campus Visit">
+                      <option>Campus Visit (Mokila)</option>
+                      <option>Admissions 2027–28</option>
+                      <option>Cambridge Curriculum Details</option>
+                      <option>Counsellor Callback</option>
+                    </select>
+                  </label>
+                </div>
+                <button type="submit" className="gb-btn gb-btn--primary-forest">
+                  Submit Enquiry →
+                </button>
+              </form>
+            )}
           </>
         )}
       </div>

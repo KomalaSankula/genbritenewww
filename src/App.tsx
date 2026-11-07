@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Header } from './components/Header'
 import { StoryScenesList } from './components/StoryScenesList'
 import { Footer } from './components/Footer'
@@ -33,34 +33,52 @@ export function App() {
     return () => observer.disconnect()
   }, [])
 
-  const scrollToScene = (id: string) => {
-    const el = document.getElementById(id)
+  const scrollToScene = useCallback((id: string) => {
+    const cleanId = id.replace(/^#/, '')
+    const el = document.getElementById(cleanId)
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      const header = document.querySelector('header')
+      const headerHeight = header ? header.getBoundingClientRect().height : 72
+      const targetY = el.getBoundingClientRect().top + window.pageYOffset - headerHeight + 2
+
+      window.scrollTo({
+        top: Math.max(0, targetY),
+        behavior: 'smooth',
+      })
+    } else {
+      console.warn(`[GenBright] Target section #${cleanId} not found`)
     }
-  }
+  }, [])
+
+  const handleOpenModal = useCallback((modalId: string) => {
+    setActiveModal(modalId)
+  }, [])
+
+  const handleCloseModal = useCallback(() => {
+    setActiveModal(null)
+  }, [])
 
   return (
     <div className="gb-app">
       <Header
         activeScene={activeScene}
         onScrollTo={scrollToScene}
-        onOpenModal={(modalId) => setActiveModal(modalId)}
+        onOpenModal={handleOpenModal}
       />
 
       <StoryScenesList
         onScrollTo={scrollToScene}
-        onOpenModal={(modalId) => setActiveModal(modalId)}
+        onOpenModal={handleOpenModal}
       />
 
       <Footer
         onScrollTo={scrollToScene}
-        onOpenModal={(modalId) => setActiveModal(modalId)}
+        onOpenModal={handleOpenModal}
       />
 
       <InteractiveModal
         modalId={activeModal}
-        onClose={() => setActiveModal(null)}
+        onClose={handleCloseModal}
       />
     </div>
   )

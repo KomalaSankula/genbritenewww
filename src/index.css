@@ -1,20 +1,21 @@
 :root {
-  --gb-ivory: #f6f4ec;
-  --gb-warm-sand: #efe9d8;
-  --gb-forest: #132c20;
-  --gb-forest-mid: #1b4332;
-  --gb-forest-soft: #1b7a52;
-  --gb-clay: #d49b15;
-  --gb-clay-surface: #fbf6e6;
-  --gb-gold: #d49b15;
-  --gb-gold-light: #f2c94c;
-  --gb-slate: #132c20;
-  --gb-slate-mid: #2d5a43;
-  --gb-text-dark: #132c20;
-  --gb-text-muted: #355243;
-  --gb-text-light: #f9f6ec;
-  --gb-border-dark: rgba(19, 44, 32, 0.14);
-  --gb-border-light: rgba(242, 201, 76, 0.22);
+  --gb-ivory: #f7f2dd;
+  --gb-warm-sand: #f3e7ba;
+  --gb-forest: #163d32;
+  --gb-forest-mid: #2d6757;
+  --gb-forest-soft: #4d7d64;
+  --gb-forest-ink: #0b2219;
+  --gb-clay: #d9a822;
+  --gb-clay-surface: #fff5d0;
+  --gb-gold: #f2c94c;
+  --gb-gold-light: #f9e38a;
+  --gb-slate: #0f2a24;
+  --gb-slate-mid: #214d41;
+  --gb-text-dark: #12362b;
+  --gb-text-muted: #3a5d52;
+  --gb-text-light: #fffaf0;
+  --gb-border-dark: rgba(15, 42, 36, 0.14);
+  --gb-border-light: rgba(249, 227, 138, 0.24);
 
   --font-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -39,7 +40,7 @@ html {
 
 body {
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.65;
 }
 
