@@ -919,8 +919,25 @@
   transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease !important;
 }
 
+/* Hero Discover Our Story: remove background on cursor hover */
 .gb-hero-overlay__ctas .gb-btn--primary-gold:hover,
-.gb-hero-first-btn:hover,
+.gb-hero-first-btn:hover {
+  background: transparent !important;
+  border-color: #829b70 !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24) !important;
+}
+
+.gb-hero-overlay__ctas .gb-btn--primary-gold:hover::after,
+.gb-hero-first-btn:hover::after {
+  transform: translate(2px, -2px) !important;
+  background-color: #ffffff !important;
+}
+
+/* Primary buttons in other scenes on hover */
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:first-child:hover {
   background: #718a60 !important;
   border-color: #718a60 !important;
@@ -929,9 +946,21 @@
   box-shadow: 0 10px 24px rgba(113, 138, 96, 0.36) !important;
 }
 
+.gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:first-child:hover::after {
+  transform: translate(2px, -2px) !important;
+  background-color: #ffffff !important;
+}
+
 /* Keep the primary CTA readable and visibly focused during keyboard navigation */
 .gb-hero-overlay__ctas .gb-btn--primary-gold:active,
-.gb-hero-first-btn:active,
+.gb-hero-first-btn:active {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 2px solid #829b70 !important;
+  color: #ffffff !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(130, 155, 112, 0.4), 0 8px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
 .gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:first-child:active,
 .gb-hero-overlay__ctas .gb-btn--primary-gold:focus,
 .gb-hero-first-btn:focus,
@@ -944,13 +973,6 @@
   color: #ffffff !important;
   outline: none !important;
   box-shadow: 0 0 0 3px rgba(130, 155, 112, 0.4), 0 8px 24px rgba(0, 0, 0, 0.22) !important;
-}
-
-.gb-hero-overlay__ctas .gb-btn--primary-gold:hover::after,
-.gb-hero-first-btn:hover::after,
-.gb-scene:not(.gb-scene--hero-fullvideo) .gb-cta-group>.gb-btn:first-child:hover::after {
-  transform: translate(2px, -2px) !important;
-  background-color: #ffffff !important;
 }
 
 /* Frosted glass treatment for hero secondary CTA matching img2 */
