@@ -14,7 +14,7 @@ const LEARNER_PROFILES = [
     tag: 'Creativity & Arts',
     description: 'Thrives in open-ended creative inquiry, visual storytelling, and connecting big ideas across disciplines.',
     imageUrl:
-      'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=85',
+      '/images/girl.png',
     imageAlt: 'Child looking thoughtfully outdoors with colorful face paint and creative imagination',
   },
   {
