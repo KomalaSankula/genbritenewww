@@ -107,8 +107,8 @@ const CAMPUS_SLIDESHOW = [
   },
   {
     id: 'camp-6',
-    imageUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=85',
-    alt: 'Active sports, movement and joy across the athletic arena',
+    imageUrl: '/images/standing.png',
+    alt: 'A school community member standing on campus',
   },
 ]
 
@@ -147,7 +147,7 @@ const FOUNDERS_AND_LEADERS = [
     num: '04',
     name: 'Sarah Jenkins',
     designation: 'Dean of Whole-Child Well-Being & Pastoral Care',
-    imageUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=85',
+    imageUrl: '/images/standing.png',
     imageAlt: 'Sarah Jenkins, Dean of Whole-Child Well-Being & Pastoral Care',
   },
   {
@@ -1042,8 +1042,8 @@ export const StoryScenesList = React.memo(function StoryScenesList({ onScrollTo,
                       {/* TOP-LEFT IMAGE: EARLY-YEARS READING & WONDER */}
                       <div className="gb-scene11-img-slot gb-scene11-img-slot--tl">
                         <img
-                          src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=85"
-                          alt="Early childhood learner discovering reading and curiosity in preschool environment"
+                          src="/images/girl.png"
+                          alt="Young child exploring creativity through outdoor painting"
                           className="gb-scene11-img"
                           loading="lazy"
                           decoding="async"

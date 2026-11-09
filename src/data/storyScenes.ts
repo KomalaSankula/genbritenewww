@@ -401,7 +401,7 @@ export const THIRTEEN_CENTRES = [
   { num: '09', name: 'Higher Education', tag: 'Learning Centre 09', detail: '', imageUrl: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=900&q=85' },
   { num: '10', name: 'Sports', tag: 'Learning Centre 10', detail: '', imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85' },
   { num: '11', name: 'Teacher Development', tag: 'Learning Centre 11', detail: '', imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85' },
-  { num: '12', name: 'Emotional Wellbeing', tag: 'Learning Centre 12', detail: '', imageUrl: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=85' },
+  { num: '12', name: 'Emotional Wellbeing', tag: 'Learning Centre 12', detail: '', imageUrl: '/images/girl.png' },
   { num: '13', name: 'Parent Partnerships', tag: 'Learning Centre 13', detail: '', imageUrl: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=900&q=85' },
 ]
 
